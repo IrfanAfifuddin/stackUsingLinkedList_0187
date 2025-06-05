@@ -33,4 +33,18 @@ public:
         cout << "Push value: " << value << endl;
         return value;
     }
+
+    void pop()
+    {
+        Node *temp = top;
+        if (isEmpty())
+        {
+            cout << "Stack is Empty." << endl;
+            return
+        }
+
+        cout << "Popped value: " << temp->data << endl;
+        top = temp->next;
+        delete temp;
+    }
 };
